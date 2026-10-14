@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://d0rogt8bywo0p"]
+
+[ext_resource type="Texture2D" uid="uid://dctjnv0oj7byp" path="res://assets/backgrounds/stages/skycraper/back.png" id="1_back"]
+[ext_resource type="Script" uid="uid://biedpxm7kj11m" path="res://scripts/ui/ParallaxTest.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://duppge8337g6a" path="res://assets/backgrounds/stages/skycraper/mountains.png" id="2_mountains"]
+[ext_resource type="Texture2D" uid="uid://dal04hf1mrce1" path="res://assets/backgrounds/stages/skycraper/far-buildings.png" id="3_far"]
+[ext_resource type="Texture2D" uid="uid://rfhjtlv1qs03" path="res://assets/backgrounds/stages/skycraper/near-buildings.png" id="4_near"]
+
+[node name="ParallaxTest" type="Node2D" unique_id=117916439]
+script = ExtResource("1_script")
+
+[node name="Back" type="Parallax2D" parent="." unique_id=208807124]
+scroll_scale = Vector2(0, 1)
+repeat_size = Vector2(384, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Back" unique_id=176577835]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, -24)
+texture = ExtResource("1_back")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 384, 240)
+
+[node name="Mountains" type="Parallax2D" parent="." unique_id=1492747169]
+scroll_scale = Vector2(0.15, 1)
+repeat_size = Vector2(448, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="Mountains" unique_id=1468479339]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, -24)
+texture = ExtResource("2_mountains")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 448, 240)
+
+[node name="FarBuildings" type="Parallax2D" parent="." unique_id=1563637211]
+scroll_scale = Vector2(0.35, 1)
+repeat_size = Vector2(432, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="FarBuildings" unique_id=1522109165]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, -24)
+texture = ExtResource("3_far")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 432, 240)
+
+[node name="NearBuildings" type="Parallax2D" parent="." unique_id=313267749]
+scroll_scale = Vector2(0.65, 1)
+repeat_size = Vector2(416, 0)
+repeat_times = 3
+
+[node name="Sprite2D" type="Sprite2D" parent="NearBuildings" unique_id=858649933]
+texture_filter = 1
+texture_repeat = 2
+position = Vector2(0, -24)
+texture = ExtResource("4_near")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 416, 240)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=861244946]
+position = Vector2(192, 108)
