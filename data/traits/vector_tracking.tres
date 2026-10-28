@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="TraitDefinition" format=3 uid="uid://5q5733cl2nly"]
+
+[ext_resource type="Script" uid="uid://dx3l3a0p48hv1" path="res://scripts/trait/trait_definition.gd" id="1_definition"]
+[ext_resource type="Script" uid="uid://cc6or6i62sayc" path="res://scripts/trait/behaviors/override_trait_behavior.gd" id="2_behavior"]
+
+[sub_resource type="Resource" id="behavior"]
+script = ExtResource("2_behavior")
+
+[resource]
+script = ExtResource("1_definition")
+trait_id = &"vector_tracking"
+display_name = "추적 보정"
+description = "공격 연속 적중 시 피해량 {stack_damage} 증가 (누적: 최대 {max_damage})
+BAD, MISS 발생 시 초기화"
+behavior = SubResource("behavior")
+damage_per_stack = 4
+max_stacks = 4

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://dv0sub6vr2dns"
+path="res://.godot/imported/same_first.dialogue-063dbe94f5a9618f215d2fb2b89b6c70.tres"
+
+[deps]
+
+source_file="res://data/dialogue/the_veil/vector/same_first.dialogue"
+dest_files=["res://.godot/imported/same_first.dialogue-063dbe94f5a9618f215d2fb2b89b6c70.tres"]
+
+[params]
+
+defaults=true

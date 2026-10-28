@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="StageDefinition" format=3 uid="uid://bs4i1i5ia55s0"]
+
+[ext_resource type="Script" uid="uid://b8hlils26646" path="res://scripts/stage/stage_definition.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://b4n7o768v1oq0" path="res://scripts/core/enemy_definition.gd" id="1_xtnuj"]
+[ext_resource type="Resource" uid="uid://dkm38ysre0xah" path="res://data/enemies/definitions/leon.tres" id="2_leon"]
+[ext_resource type="Resource" uid="uid://c3hx2lrqswxpa" path="res://data/stages/visuals/revelation_visual.tres" id="3_visual"]
+[ext_resource type="AudioStream" uid="uid://dpp0lycd8a7fh" path="res://assets/audio/bgm/Revelation.mp3" id="4_bgm"]
+
+[resource]
+script = ExtResource("1_script")
+stage_id = &"revelation"
+display_name = "개안"
+scene_path = "res://scenes/combat/StageCombat.tscn"
+visual_definition = ExtResource("3_visual")
+bgm = ExtResource("4_bgm")
+encounter_ids = Array[StringName]([&"leon"])
+encounters = Array[ExtResource("1_xtnuj")]([ExtResource("2_leon")])

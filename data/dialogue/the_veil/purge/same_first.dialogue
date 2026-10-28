@@ -1,0 +1,7 @@
+~ start
+
+퍼지: [#speaker=purge] 나잖아?
+에코: [#speaker=player] 어느 쪽이 삭제될까?
+퍼지: [#speaker=purge] 이건 중복 삭제인데...
+
+=> END

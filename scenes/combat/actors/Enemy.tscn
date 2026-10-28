@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cq7n4enemyscn1"]
+
+[ext_resource type="Script" uid="uid://cq7n4combatemy" path="res://scripts/combat/enemy.gd" id="1_script"]
+[ext_resource type="Resource" path="res://data/forms/echo_animation_profile.tres" id="2_profile"]
+[ext_resource type="Resource" path="res://data/enemies/test_enemy.tres" id="3_combat"]
+
+[node name="Enemy" type="Node2D"]
+z_index = 10
+scale = Vector2(1, 1)
+script = ExtResource("1_script")
+animation_profile = ExtResource("2_profile")
+combat_profile = ExtResource("3_combat")
+
+[node name="MotionRoot" type="Node2D" parent="."]
+
+[node name="VisualRoot" type="Node2D" parent="MotionRoot"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MotionRoot/VisualRoot"]
+position = Vector2(0, -48)
+flip_h = true
+
+[node name="EffectAnchor" type="Marker2D" parent="MotionRoot"]
+position = Vector2(0, -24)
+
+[node name="DialogueAnchor" type="Marker2D" parent="MotionRoot" groups=["dialogue_anchor"]]
+position = Vector2(0, -80)

@@ -1,0 +1,19 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/damage_popup.gd" id="1_popup"]
+
+[node name="DamagePopup" type="Control"]
+custom_minimum_size = Vector2(72, 28)
+offset_right = 72.0
+offset_bottom = 28.0
+mouse_filter = 2
+script = ExtResource("1_popup")
+
+[node name="DamageLabel" type="Label" parent="."]
+offset_right = 72.0
+offset_bottom = 28.0
+mouse_filter = 2
+theme_override_font_sizes/font_size = 30
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1

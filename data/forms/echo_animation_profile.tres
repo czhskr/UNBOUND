@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="CharacterAnimationProfile" format=3 uid="uid://dewchbia7nrky"]
+
+[ext_resource type="Script" uid="uid://c2h1706qugj0d" path="res://scripts/core/character_animation_profile.gd" id="1_profile"]
+
+[resource]
+script = ExtResource("1_profile")
+frame_root = "res://assets/characters/echo"
+idle_end_frame = 15
+idle_fps = 15.0
+idle_loop = true
+attack_start_frame = 6
+attack_end_frame = 18
+attack_fps = 23.0
+attack_frames = null
+hit_end_frame = 2
+hit_fps = 15.0
+death_end_frame = 14
+death_fps = 15.0
+run_end_frame = 7
+run_fps = 15.0
+run_loop = true

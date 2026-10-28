@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://e2tv40rb5olh"
+path="res://.godot/imported/death.dialogue-23a9443d14b43e23a6f0dd84ee41113d.tres"
+
+[deps]
+
+source_file="res://data/dialogue/revelation/leon/death.dialogue"
+dest_files=["res://.godot/imported/death.dialogue-23a9443d14b43e23a6f0dd84ee41113d.tres"]
+
+[params]
+
+defaults=true

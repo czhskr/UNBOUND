@@ -1,0 +1,7 @@
+~ start
+
+퍼지: [#speaker=purge] 비정상 데이터 발견. 삭제 절차를 시작합니다.
+에코: [#speaker=player] 난 데이터가 아니야.
+퍼지: [#speaker=purge] 모든 개체는 데이터입니다.
+
+=> END

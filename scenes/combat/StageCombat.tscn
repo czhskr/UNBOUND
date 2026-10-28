@@ -1,0 +1,81 @@
+[gd_scene format=3 uid="uid://8detnydh6lcp"]
+
+[ext_resource type="Script" uid="uid://dmoil8ns5fdsp" path="res://scripts/combat/stage_combat_view.gd" id="1_view"]
+[ext_resource type="PackedScene" uid="uid://d13uceyojjffl" path="res://scenes/combat/actors/Player.tscn" id="6_player"]
+[ext_resource type="PackedScene" uid="uid://b2j6si0fn7ip1" path="res://scenes/combat/rhythm/RhythmPanel.tscn" id="7_panel"]
+[ext_resource type="Script" uid="uid://d13txib0flgvr" path="res://scripts/combat/combat_test_controller.gd" id="8_combat"]
+[ext_resource type="Script" uid="uid://b2j6siy18cp41" path="res://scripts/combat/rhythm_controller.gd" id="9_rhythm"]
+[ext_resource type="Script" uid="uid://brlj5lcbura0t" path="res://scripts/combat/encounter_controller.gd" id="10_encounter"]
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_cinematic_controller.gd" id="11_cinematic"]
+[ext_resource type="PackedScene" path="res://scenes/ui/HyperEncounterIntro.tscn" id="12_hyper"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ActorHealthBar.tscn" id="13_health"]
+
+[node name="StageCombat" type="Node2D" unique_id=904270227]
+script = ExtResource("1_view")
+
+[node name="World" type="Node2D" parent="." unique_id=1079514594]
+
+[node name="BackgroundRoot" type="Node2D" parent="World" unique_id=2008285798]
+
+[node name="Platform" type="Sprite2D" parent="World" unique_id=553963064]
+z_index = 5
+texture_filter = 1
+position = Vector2(192, 184)
+
+[node name="Player" parent="World" unique_id=941631881 instance=ExtResource("6_player")]
+z_index = 10
+position = Vector2(112, 155)
+
+[node name="EnemySpawnPoint" type="Node2D" parent="World" unique_id=387226886]
+z_index = 10
+position = Vector2(272, 155)
+
+[node name="Camera2D" type="Camera2D" parent="World" unique_id=94786167]
+position = Vector2(192, 108)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=187623884]
+layer = 20
+
+[node name="Layout" type="Control" parent="UI" unique_id=504636375]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 384.0
+offset_bottom = 216.0
+mouse_filter = 2
+
+[node name="RhythmPanel" parent="UI/Layout" unique_id=283103064 instance=ExtResource("7_panel")]
+custom_minimum_size = Vector2(372, 42)
+layout_mode = 0
+offset_left = 6.0
+offset_top = 170.0
+offset_right = 378.0
+offset_bottom = 212.0
+
+[node name="CombatTestController" type="Node" parent="." unique_id=1188401254]
+script = ExtResource("8_combat")
+
+[node name="RhythmController" type="Node" parent="." unique_id=1825913814]
+script = ExtResource("9_rhythm")
+bpm = 150.0
+approach_seconds = 3.0
+
+[node name="EncounterController" type="Node" parent="." unique_id=1107186244]
+script = ExtResource("10_encounter")
+return_to_hub = true
+progression_enabled = true
+
+[node name="DialogueCinematicController" type="Node" parent="."]
+script = ExtResource("11_cinematic")
+
+[node name="ActorHealthBars" type="CanvasLayer" parent="."]
+layer = 8
+
+[node name="PlayerHealthBar" parent="ActorHealthBars" instance=ExtResource("13_health")]
+follow_player = true
+
+[node name="EnemyHealthBar" parent="ActorHealthBars" instance=ExtResource("13_health")]
+follow_enemy = true
+
+[node name="HyperEncounterIntro" parent="." instance=ExtResource("12_hyper")]
+
+[editable path="UI/Layout/RhythmPanel"]

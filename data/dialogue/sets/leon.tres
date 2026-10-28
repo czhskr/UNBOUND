@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EncounterDialogueSet" format=3 uid="uid://dfy6ixs8q60if"]
+
+[ext_resource type="Script" uid="uid://djkccbkn0ae1l" path="res://scripts/dialogue/encounter_dialogue_set.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="2_dtype"]
+[ext_resource type="Resource" uid="uid://bq6y61rkuarbp" path="res://data/dialogue/revelation/leon/first.dialogue" id="3_first"]
+[ext_resource type="Resource" uid="uid://dsfpl6iqeoxvu" path="res://data/dialogue/revelation/leon/repeat_01.dialogue" id="4_r1"]
+[ext_resource type="Resource" uid="uid://bc011lw0lmm4e" path="res://data/dialogue/revelation/leon/repeat_02.dialogue" id="5_r2"]
+[ext_resource type="Resource" uid="uid://bhxpo45abdv7x" path="res://data/dialogue/revelation/leon/repeat_03.dialogue" id="6_r3"]
+[ext_resource type="Resource" uid="uid://bb38qvhmlegqr" path="res://data/dialogue/revelation/leon/same_first.dialogue" id="7_sf"]
+
+[resource]
+script = ExtResource("1_script")
+first_encounter = ExtResource("3_first")
+repeat_dialogues = Array[ExtResource("2_dtype")]([ExtResource("4_r1"), ExtResource("5_r2"), ExtResource("6_r3")])
+same_override_first = ExtResource("7_sf")

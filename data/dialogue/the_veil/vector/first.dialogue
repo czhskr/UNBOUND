@@ -1,0 +1,7 @@
+~ start
+
+벡터: [#speaker=vector] 목표 포착. 이동 경로를 예측합니다.
+에코: [#speaker=player] 내 움직임을 예측한다고?
+벡터: [#speaker=vector] 이전 기록을 분석하면 어렵지 않습니다.
+
+=> END

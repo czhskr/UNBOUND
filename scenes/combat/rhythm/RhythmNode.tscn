@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://b8rhythmnodscn"]
+
+[ext_resource type="Script" uid="uid://b8rhythmnode01" path="res://scripts/combat/rhythm_node.gd" id="1_script"]
+
+[node name="RhythmNode" type="Control"]
+custom_minimum_size = Vector2(36, 36)
+layout_mode = 3
+offset_right = 36.0
+offset_bottom = 36.0
+mouse_filter = 2
+script = ExtResource("1_script")

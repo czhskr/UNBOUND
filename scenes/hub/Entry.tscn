@@ -1,0 +1,246 @@
+[gd_scene format=3 uid="uid://b3rwyl47qhrol"]
+
+[ext_resource type="Script" uid="uid://dyppcorhfmo13" path="res://scripts/hub/entry.gd" id="1_entry"]
+[ext_resource type="PackedScene" path="res://scenes/hub/HubPlayer.tscn" id="2_player"]
+[ext_resource type="Texture2D" uid="uid://by1k7cc2gpvyo" path="res://assets/backgrounds/entry/entry.png" id="4_bg"]
+[ext_resource type="Theme" path="res://data/ui/unbound_theme.tres" id="5_theme"]
+
+[node name="Entry" type="Node2D" unique_id=331676996]
+script = ExtResource("1_entry")
+
+[node name="Background" type="CanvasLayer" parent="." unique_id=1514654945]
+layer = -1
+
+[node name="Art" type="TextureRect" parent="Background" unique_id=775793867]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("4_bg")
+expand_mode = 1
+stretch_mode = 6
+
+[node name="World" type="Node2D" parent="." unique_id=258194313]
+
+[node name="Floor" type="Polygon2D" parent="World" unique_id=1282276821]
+visible = false
+color = Color(0.13, 0.14, 0.17, 1)
+polygon = PackedVector2Array(-40, 155, 430, 155, 430, 230, -40, 230)
+
+[node name="HubPlayer" parent="World" unique_id=1554029277 instance=ExtResource("2_player")]
+visible = false
+position = Vector2(78, 155)
+
+[node name="Camera2D" type="Camera2D" parent="World" unique_id=1955726916]
+position = Vector2(192, 108)
+
+[node name="UI" type="CanvasLayer" parent="." unique_id=1164960910]
+layer = 20
+
+[node name="TVUIRoot" type="Control" parent="UI" unique_id=976012972]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 504.0
+offset_bottom = 288.0
+mouse_filter = 2
+theme = ExtResource("5_theme")
+
+[node name="Margin" type="MarginContainer" parent="UI/TVUIRoot" unique_id=991893204]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_constants/margin_left = 12
+theme_override_constants/margin_top = 12
+theme_override_constants/margin_right = 12
+theme_override_constants/margin_bottom = 12
+
+[node name="Columns" type="HBoxContainer" parent="UI/TVUIRoot/Margin" unique_id=1502071742]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 16
+
+[node name="LeftPanel" type="Control" parent="UI/TVUIRoot/Margin/Columns" unique_id=268704095]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.45
+mouse_filter = 2
+
+[node name="FormPreview" type="Control" parent="UI/TVUIRoot/Margin/Columns/LeftPanel" unique_id=1471933559]
+clip_contents = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = -44.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="PreviewSprite" type="AnimatedSprite2D" parent="UI/TVUIRoot/Margin/Columns/LeftPanel/FormPreview" unique_id=961079747]
+
+[node name="FormSelector" type="HBoxContainer" parent="UI/TVUIRoot/Margin/Columns/LeftPanel" unique_id=50550459]
+z_index = 1
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -28.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 8
+
+[node name="PreviousFormButton" type="Button" parent="UI/TVUIRoot/Margin/Columns/LeftPanel/FormSelector" unique_id=334983825]
+custom_minimum_size = Vector2(36, 28)
+layout_mode = 2
+focus_mode = 0
+text = "<"
+
+[node name="FormName" type="Label" parent="UI/TVUIRoot/Margin/Columns/LeftPanel/FormSelector" unique_id=747434827]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "에코"
+horizontal_alignment = 1
+
+[node name="NextFormButton" type="Button" parent="UI/TVUIRoot/Margin/Columns/LeftPanel/FormSelector" unique_id=1511066661]
+custom_minimum_size = Vector2(36, 28)
+layout_mode = 2
+focus_mode = 0
+text = ">"
+
+[node name="RightPanel" type="VBoxContainer" parent="UI/TVUIRoot/Margin/Columns" unique_id=593156569]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.55
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="TraitLabel" type="Label" parent="UI/TVUIRoot/Margin/Columns/RightPanel" unique_id=1981987869]
+layout_mode = 2
+text = "특성: 없음"
+
+[node name="AtkRow" type="HBoxContainer" parent="UI/TVUIRoot/Margin/Columns/RightPanel" unique_id=345646088]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="AtkName" type="Label" parent="UI/TVUIRoot/Margin/Columns/RightPanel/AtkRow" unique_id=418374662]
+custom_minimum_size = Vector2(112, 0)
+layout_mode = 2
+text = "공격력:"
+
+[node name="AtkValue" type="Label" parent="UI/TVUIRoot/Margin/Columns/RightPanel/AtkRow" unique_id=1331152162]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "20"
+horizontal_alignment = 2
+
+[node name="HpRow" type="HBoxContainer" parent="UI/TVUIRoot/Margin/Columns/RightPanel" unique_id=1407255003]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="HpName" type="Label" parent="UI/TVUIRoot/Margin/Columns/RightPanel/HpRow" unique_id=27610910]
+custom_minimum_size = Vector2(112, 0)
+layout_mode = 2
+text = "체력:"
+
+[node name="HpValue" type="Label" parent="UI/TVUIRoot/Margin/Columns/RightPanel/HpRow" unique_id=2017806907]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "100"
+horizontal_alignment = 2
+
+[node name="AttacksRow" type="HBoxContainer" parent="UI/TVUIRoot/Margin/Columns/RightPanel" unique_id=275731561]
+layout_mode = 2
+mouse_filter = 2
+
+[node name="AttacksName" type="Label" parent="UI/TVUIRoot/Margin/Columns/RightPanel/AttacksRow" unique_id=311381528]
+custom_minimum_size = Vector2(112, 0)
+layout_mode = 2
+text = "공격 횟수:"
+
+[node name="AttacksValue" type="Label" parent="UI/TVUIRoot/Margin/Columns/RightPanel/AttacksRow" unique_id=533873536]
+custom_minimum_size = Vector2(150, 0)
+layout_mode = 2
+text = "4"
+horizontal_alignment = 2
+
+[node name="StageSpacer" type="Control" parent="UI/TVUIRoot/Margin/Columns/RightPanel" unique_id=1974209505]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_filter = 2
+
+[node name="DifficultyPanel" type="VBoxContainer" parent="UI/TVUIRoot/Margin/Columns/RightPanel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="DifficultyHeading" type="Label" parent="UI/TVUIRoot/Margin/Columns/RightPanel/DifficultyPanel"]
+layout_mode = 2
+text = "난이도"
+
+[node name="DifficultyCycle" type="HBoxContainer" parent="UI/TVUIRoot/Margin/Columns/RightPanel/DifficultyPanel"]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="PreviousDifficultyButton" type="Button" parent="UI/TVUIRoot/Margin/Columns/RightPanel/DifficultyPanel/DifficultyCycle"]
+custom_minimum_size = Vector2(36, 28)
+layout_mode = 2
+focus_mode = 0
+text = "<"
+
+[node name="DifficultyName" type="Label" parent="UI/TVUIRoot/Margin/Columns/RightPanel/DifficultyPanel/DifficultyCycle"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "보통"
+horizontal_alignment = 1
+
+[node name="NextDifficultyButton" type="Button" parent="UI/TVUIRoot/Margin/Columns/RightPanel/DifficultyPanel/DifficultyCycle"]
+custom_minimum_size = Vector2(36, 28)
+layout_mode = 2
+focus_mode = 0
+text = ">"
+
+[node name="StagePanel" type="VBoxContainer" parent="UI/TVUIRoot/Margin/Columns/RightPanel" unique_id=609922709]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="StageHeading" type="Label" parent="UI/TVUIRoot/Margin/Columns/RightPanel/StagePanel" unique_id=2078387078]
+layout_mode = 2
+text = "스테이지"
+
+[node name="StageCycle" type="HBoxContainer" parent="UI/TVUIRoot/Margin/Columns/RightPanel/StagePanel" unique_id=312391314]
+layout_mode = 2
+mouse_filter = 2
+theme_override_constants/separation = 8
+
+[node name="PreviousStageButton" type="Button" parent="UI/TVUIRoot/Margin/Columns/RightPanel/StagePanel/StageCycle" unique_id=924049354]
+custom_minimum_size = Vector2(36, 28)
+layout_mode = 2
+focus_mode = 0
+text = "<"
+
+[node name="StageName" type="Label" parent="UI/TVUIRoot/Margin/Columns/RightPanel/StagePanel/StageCycle" unique_id=947768942]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "허상"
+horizontal_alignment = 1
+
+[node name="NextStageButton" type="Button" parent="UI/TVUIRoot/Margin/Columns/RightPanel/StagePanel/StageCycle" unique_id=105395908]
+custom_minimum_size = Vector2(36, 28)
+layout_mode = 2
+focus_mode = 0
+text = ">"
+
+[node name="StartButton" type="Button" parent="UI/TVUIRoot/Margin/Columns/RightPanel/StagePanel" unique_id=1183872057]
+custom_minimum_size = Vector2(160, 36)
+layout_mode = 2
+focus_mode = 0
+text = "진입"

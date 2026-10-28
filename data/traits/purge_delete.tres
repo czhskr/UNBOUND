@@ -1,0 +1,16 @@
+[gd_resource type="Resource" script_class="TraitDefinition" format=3 uid="uid://cq6h24bcen4jn"]
+
+[ext_resource type="Script" uid="uid://dx3l3a0p48hv1" path="res://scripts/trait/trait_definition.gd" id="1_definition"]
+[ext_resource type="Script" uid="uid://cc6or6i62sayc" path="res://scripts/trait/behaviors/override_trait_behavior.gd" id="2_behavior"]
+
+[sub_resource type="Resource" id="behavior"]
+script = ExtResource("2_behavior")
+
+[resource]
+script = ExtResource("1_definition")
+trait_id = &"purge_delete"
+display_name = "삭제 명령"
+description = "공격 적중 시 다음 적 공격 1개 삭제
+쿨타임: {cooldown}초"
+behavior = SubResource("behavior")
+cooldown_seconds = 20.0

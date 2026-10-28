@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://iisvr4jqucmv"
+path="res://.godot/imported/stage_combat_dialogue_smoke.dialogue-c56d66b7028d4d49fe2dac0d287d92de.tres"
+
+[deps]
+
+source_file="res://data/dialogue/tests/stage_combat_dialogue_smoke.dialogue"
+dest_files=["res://.godot/imported/stage_combat_dialogue_smoke.dialogue-c56d66b7028d4d49fe2dac0d287d92de.tres"]
+
+[params]
+
+defaults=true

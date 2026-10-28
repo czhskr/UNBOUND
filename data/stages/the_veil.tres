@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="StageDefinition" format=3 uid="uid://bkx0a073kcrkw"]
+
+[ext_resource type="Script" uid="uid://b8hlils26646" path="res://scripts/stage/stage_definition.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://b4n7o768v1oq0" path="res://scripts/core/enemy_definition.gd" id="2_jgqhv"]
+[ext_resource type="Resource" uid="uid://b1warq685hme4" path="res://data/enemies/definitions/sentry.tres" id="2_sentry"]
+[ext_resource type="Resource" uid="uid://b6ylect5ib47r" path="res://data/enemies/definitions/vector.tres" id="3_vector"]
+[ext_resource type="Resource" uid="uid://drncj5jysxckv" path="res://data/enemies/definitions/purge.tres" id="4_purge"]
+[ext_resource type="Resource" uid="uid://dnaidbhdtsi70" path="res://data/stages/visuals/the_veil_visual.tres" id="5_visual"]
+[ext_resource type="AudioStream" uid="uid://dmvkcnxvfo8dp" path="res://assets/audio/bgm/TheVeil.mp3" id="6_bgm"]
+
+[resource]
+script = ExtResource("1_script")
+stage_id = &"the_veil"
+display_name = "허상"
+scene_path = "res://scenes/combat/StageCombat.tscn"
+background_theme_id = &"the_veil"
+visual_definition = ExtResource("5_visual")
+bgm = ExtResource("6_bgm")
+encounter_ids = Array[StringName]([&"sentry", &"vector", &"purge"])
+next_stage_id = &"rupture"
+unlocked_by_default = true
+encounters = Array[ExtResource("2_jgqhv")]([ExtResource("2_sentry"), ExtResource("3_vector"), ExtResource("4_purge")])

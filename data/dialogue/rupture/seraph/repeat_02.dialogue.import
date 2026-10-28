@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://bdtfflpedwfhg"
+path="res://.godot/imported/repeat_02.dialogue-936c5949990057580e813d6b87bdb991.tres"
+
+[deps]
+
+source_file="res://data/dialogue/rupture/seraph/repeat_02.dialogue"
+dest_files=["res://.godot/imported/repeat_02.dialogue-936c5949990057580e813d6b87bdb991.tres"]
+
+[params]
+
+defaults=true

@@ -1,0 +1,6 @@
+~ player_enemy
+
+Player: [#speaker=player] ...
+Enemy: [#speaker=test_enemy_a] ...
+SYSTEM: [#speaker=system] 대화 시스템 테스트.
+=> END

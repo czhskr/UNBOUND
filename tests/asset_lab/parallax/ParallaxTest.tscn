@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://d0rogt8bywo0p"]
 
-[ext_resource type="Texture2D" uid="uid://dctjnv0oj7byp" path="res://assets/backgrounds/stages/skycraper/back.png" id="1_back"]
-[ext_resource type="Script" uid="uid://biedpxm7kj11m" path="res://scripts/ui/ParallaxTest.gd" id="1_script"]
-[ext_resource type="Texture2D" uid="uid://duppge8337g6a" path="res://assets/backgrounds/stages/skycraper/mountains.png" id="2_mountains"]
-[ext_resource type="Texture2D" uid="uid://dal04hf1mrce1" path="res://assets/backgrounds/stages/skycraper/far-buildings.png" id="3_far"]
-[ext_resource type="Texture2D" uid="uid://rfhjtlv1qs03" path="res://assets/backgrounds/stages/skycraper/near-buildings.png" id="4_near"]
+[ext_resource type="Texture2D" uid="uid://dctjnv0oj7byp" path="res://assets/backgrounds/stages/TheVeil/back.png" id="1_back"]
+[ext_resource type="Script" uid="uid://biedpxm7kj11m" path="res://tests/asset_lab/parallax/ParallaxTest.gd" id="1_script"]
+[ext_resource type="Texture2D" uid="uid://duppge8337g6a" path="res://assets/backgrounds/stages/TheVeil/mountains.png" id="2_mountains"]
+[ext_resource type="Texture2D" uid="uid://dal04hf1mrce1" path="res://assets/backgrounds/stages/TheVeil/far-buildings.png" id="3_far"]
+[ext_resource type="Texture2D" uid="uid://rfhjtlv1qs03" path="res://assets/backgrounds/stages/TheVeil/near-buildings.png" id="4_near"]
 
 [node name="ParallaxTest" type="Node2D" unique_id=117916439]
 script = ExtResource("1_script")

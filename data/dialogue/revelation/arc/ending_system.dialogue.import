@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://cldbniaoxeje1"
+path="res://.godot/imported/ending_system.dialogue-829a3fbf60595cf7ddb2d3c43a96e4e1.tres"
+
+[deps]
+
+source_file="res://data/dialogue/revelation/arc/ending_system.dialogue"
+dest_files=["res://.godot/imported/ending_system.dialogue-829a3fbf60595cf7ddb2d3c43a96e4e1.tres"]
+
+[params]
+
+defaults=true

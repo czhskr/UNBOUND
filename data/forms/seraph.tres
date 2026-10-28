@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="FormDefinition" format=3 uid="uid://ioqtchiypl4c"]
+
+[ext_resource type="Script" uid="uid://bh8piy43a2ee2" path="res://scripts/form/form_definition.gd" id="1_form"]
+[ext_resource type="Resource" path="res://data/enemies/animations/seraph_animation.tres" id="2_profile"]
+
+[resource]
+script = ExtResource("1_form")
+form_id = &"seraph"
+display_name = "세라프"
+description = "TEMP TEST VALUE. Player stats are not copied from the enemy."
+animation_profile = ExtResource("2_profile")
+visual_offset = Vector2(0, 15)
+base_attack_power = 24
+base_max_hp = 110
+trait_id = &"seraph_authority"

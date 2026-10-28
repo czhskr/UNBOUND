@@ -1,0 +1,28 @@
+[gd_resource type="Resource" script_class="CharacterAnimationProfile" format=3]
+
+[ext_resource type="Script" path="res://scripts/core/character_animation_profile.gd" id="1_profile"]
+
+[resource]
+script = ExtResource("1_profile")
+frame_root = "res://assets/characters/cipher"
+idle_start_frame = 0
+idle_end_frame = 11
+idle_fps = 15.0
+idle_loop = true
+attack_start_frame = 14
+attack_end_frame = 28
+attack_fps = 23.0
+attack_loop = false
+hit_start_frame = 0
+hit_end_frame = 2
+hit_fps = 15.0
+hit_loop = false
+death_start_frame = 0
+death_end_frame = 11
+death_fps = 15.0
+death_loop = false
+run_start_frame = 0
+run_end_frame = 11
+run_fps = 15.0
+run_loop = true
+reuse_idle_for_run = true

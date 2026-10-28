@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="EncounterDialogueSet" format=3 uid="uid://c1g36k3f5mes"]
+
+[ext_resource type="Script" uid="uid://djkccbkn0ae1l" path="res://scripts/dialogue/encounter_dialogue_set.gd" id="1_script"]
+[ext_resource type="Script" uid="uid://dbs4435dsf3ry" path="res://addons/dialogue_manager/dialogue_resource.gd" id="2_dtype"]
+[ext_resource type="Resource" uid="uid://dat5sl06vh1l2" path="res://data/dialogue/rupture/seraph/first.dialogue" id="3_first"]
+[ext_resource type="Resource" uid="uid://h6utqqwj37gh" path="res://data/dialogue/rupture/seraph/repeat_01.dialogue" id="4_r1"]
+[ext_resource type="Resource" uid="uid://bdtfflpedwfhg" path="res://data/dialogue/rupture/seraph/repeat_02.dialogue" id="5_r2"]
+[ext_resource type="Resource" uid="uid://bqyc8qd1ujqke" path="res://data/dialogue/rupture/seraph/repeat_03.dialogue" id="6_r3"]
+[ext_resource type="Resource" uid="uid://b61nn3rfbpxfb" path="res://data/dialogue/rupture/seraph/same_first.dialogue" id="7_sf"]
+
+[resource]
+script = ExtResource("1_script")
+first_encounter = ExtResource("3_first")
+repeat_dialogues = Array[ExtResource("2_dtype")]([ExtResource("4_r1"), ExtResource("5_r2"), ExtResource("6_r3")])
+same_override_first = ExtResource("7_sf")

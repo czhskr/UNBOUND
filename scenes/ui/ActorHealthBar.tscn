@@ -1,0 +1,47 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/ui/actor_health_bar.gd" id="1_bar"]
+
+[node name="ActorHealthBar" type="Control"]
+custom_minimum_size = Vector2(212, 48)
+offset_right = 212.0
+offset_bottom = 48.0
+mouse_filter = 2
+clip_contents = true
+script = ExtResource("1_bar")
+
+[node name="PanelBackground" type="Panel" parent="."]
+mouse_filter = 2
+clip_contents = true
+
+[node name="ProgressLabel" type="Label" parent="PanelBackground"]
+mouse_filter = 2
+text = "Progress"
+vertical_alignment = 1
+
+[node name="BarFrame" type="Panel" parent="PanelBackground"]
+mouse_filter = 2
+clip_contents = true
+
+[node name="AfterimageBar" type="ProgressBar" parent="PanelBackground/BarFrame"]
+mouse_filter = 2
+show_percentage = false
+max_value = 100.0
+value = 100.0
+
+[node name="CurrentBar" type="ProgressBar" parent="PanelBackground/BarFrame"]
+mouse_filter = 2
+show_percentage = false
+max_value = 100.0
+value = 100.0
+
+[node name="PercentLabel" type="Label" parent="PanelBackground/BarFrame"]
+mouse_filter = 2
+text = "100%"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HitFlash" type="ColorRect" parent="PanelBackground/BarFrame"]
+mouse_filter = 2
+color = Color(1, 1, 1, 1)
+modulate = Color(1, 1, 1, 0)

@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://dc1uxjnngni22"
+path="res://.godot/imported/same_first.dialogue-5a167177d3aa8124a52cf168ca2ad472.tres"
+
+[deps]
+
+source_file="res://data/dialogue/revelation/arc/same_first.dialogue"
+dest_files=["res://.godot/imported/same_first.dialogue-5a167177d3aa8124a52cf168ca2ad472.tres"]
+
+[params]
+
+defaults=true

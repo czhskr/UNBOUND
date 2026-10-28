@@ -1,0 +1,44 @@
+[gd_resource type="Resource" script_class="StageVisualDefinition" format=3 uid="uid://c6r4bgbgl6yrm"]
+
+[ext_resource type="Script" uid="uid://dythr1v77crd1" path="res://scripts/stage/stage_visual_definition.gd" id="1_def"]
+[ext_resource type="Script" uid="uid://ymssyi3f3nvb" path="res://scripts/stage/stage_visual_layer.gd" id="2_layer"]
+[ext_resource type="Texture2D" uid="uid://dyybcmf5fd7ys" path="res://assets/backgrounds/stages/Rupture/back.png" id="3_back"]
+[ext_resource type="Texture2D" uid="uid://8s52wgw06rr8" path="res://assets/backgrounds/stages/Rupture/sun.png" id="4_sun"]
+[ext_resource type="Texture2D" uid="uid://dp45c7uad2k7w" path="res://assets/backgrounds/stages/Rupture/far-buildings.png" id="5_far"]
+[ext_resource type="Texture2D" uid="uid://cvlc84crqecry" path="res://assets/backgrounds/stages/Rupture/near-buildings.png" id="6_near"]
+[ext_resource type="Texture2D" uid="uid://ip4ofbqtmcgn" path="res://assets/backgrounds/stages/Rupture/platform.png" id="7_platform"]
+
+[sub_resource type="Resource" id="layer_back"]
+script = ExtResource("2_layer")
+layer_id = &"back"
+texture = ExtResource("3_back")
+
+[sub_resource type="Resource" id="layer_sun"]
+script = ExtResource("2_layer")
+layer_id = &"sun"
+texture = ExtResource("4_sun")
+z_index = 1
+scroll_ratio = 0.05
+offset = Vector2(36, 72)
+
+[sub_resource type="Resource" id="layer_far"]
+script = ExtResource("2_layer")
+layer_id = &"far-buildings"
+texture = ExtResource("5_far")
+z_index = 2
+scroll_ratio = 0.3
+
+[sub_resource type="Resource" id="layer_near"]
+script = ExtResource("2_layer")
+layer_id = &"near-buildings"
+texture = ExtResource("6_near")
+z_index = 3
+scroll_ratio = 0.6
+
+[resource]
+script = ExtResource("1_def")
+background_layers = Array[ExtResource("2_layer")]([SubResource("layer_back"), SubResource("layer_sun"), SubResource("layer_far"), SubResource("layer_near")])
+platform_texture = ExtResource("7_platform")
+ground_y = 154.5
+background_offset = Vector2(0, -24)
+platform_z_index = 5

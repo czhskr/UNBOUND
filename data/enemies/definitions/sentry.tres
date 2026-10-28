@@ -1,0 +1,17 @@
+[gd_resource type="Resource" script_class="EnemyDefinition" format=3 uid="uid://b1warq685hme4"]
+
+[ext_resource type="Script" uid="uid://b4n7o768v1oq0" path="res://scripts/core/enemy_definition.gd" id="1_script"]
+[ext_resource type="Resource" path="res://data/enemies/test_enemy.tres" id="2_combat"]
+[ext_resource type="Resource" path="res://data/enemies/animations/sentry_animation.tres" id="3_anim"]
+[ext_resource type="Resource" path="res://data/dialogue/sets/sentry.tres" id="4_talk"]
+
+[resource]
+script = ExtResource("1_script")
+enemy_id = &"sentry"
+display_name = "센트리"
+hyper_description = "시스템 경비 프로그램"
+encounter_dialogue = ExtResource("4_talk")
+combat_profile = ExtResource("2_combat")
+max_hp = 500
+animation_profile = ExtResource("3_anim")
+visual_offset = Vector2(0, 15)

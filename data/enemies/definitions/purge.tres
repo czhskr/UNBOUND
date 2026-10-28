@@ -1,0 +1,18 @@
+[gd_resource type="Resource" script_class="EnemyDefinition" format=3 uid="uid://drncj5jysxckv"]
+
+[ext_resource type="Script" uid="uid://b4n7o768v1oq0" path="res://scripts/core/enemy_definition.gd" id="1_script"]
+[ext_resource type="Resource" path="res://data/enemies/test_enemy.tres" id="2_combat"]
+[ext_resource type="Resource" path="res://data/enemies/animations/purge_animation.tres" id="3_anim"]
+[ext_resource type="Resource" path="res://data/dialogue/sets/purge.tres" id="4_talk"]
+
+[resource]
+script = ExtResource("1_script")
+enemy_id = &"purge"
+display_name = "퍼지"
+hyper_description = "강제 삭제 프로그램"
+encounter_dialogue = ExtResource("4_talk")
+combat_profile = ExtResource("2_combat")
+max_hp = 650
+animation_profile = ExtResource("3_anim")
+visual_offset = Vector2(0, 15)
+can_lock_nodes = true

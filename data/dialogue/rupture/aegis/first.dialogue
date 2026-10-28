@@ -1,0 +1,7 @@
+~ start
+
+이지스: [#speaker=aegis] 보호 영역에 접근했습니다. 즉시 돌아가십시오.
+에코: [#speaker=player] 이 너머에는 뭐가 있지?
+이지스: [#speaker=aegis] 알 필요 없습니다.
+
+=> END

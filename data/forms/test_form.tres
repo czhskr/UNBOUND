@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="FormDefinition" format=3 uid="uid://dwiw8wxnur3ee"]
+
+[ext_resource type="Script" uid="uid://bh8piy43a2ee2" path="res://scripts/form/form_definition.gd" id="1_form"]
+[ext_resource type="Resource" uid="uid://dewchbia7nrky" path="res://data/forms/echo_animation_profile.tres" id="2_profile"]
+
+[resource]
+script = ExtResource("1_form")
+form_id = &"test_form"
+display_name = "Test Form"
+description = "Test-only form. Reuses the Echo visual and is not final content."
+animation_profile = ExtResource("2_profile")
+trait_id = &"test_trait"

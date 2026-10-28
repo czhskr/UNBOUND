@@ -1,0 +1,24 @@
+[gd_resource type="Resource" script_class="EnemyDefinition" format=3 uid="uid://dkm38ysre0xah"]
+
+[ext_resource type="Script" uid="uid://b4n7o768v1oq0" path="res://scripts/core/enemy_definition.gd" id="1_script"]
+[ext_resource type="Resource" path="res://data/enemies/test_enemy.tres" id="2_combat"]
+[ext_resource type="Resource" path="res://data/enemies/animations/leon_animation.tres" id="3_anim"]
+[ext_resource type="Resource" uid="uid://b7hsbiy7wrd5j" path="res://data/enemies/definitions/arc.tres" id="4_arc"]
+[ext_resource type="Resource" path="res://data/dialogue/sets/leon.tres" id="5_talk"]
+[ext_resource type="Resource" uid="uid://e2tv40rb5olh" path="res://data/dialogue/revelation/leon/death.dialogue" id="6_death"]
+
+[resource]
+script = ExtResource("1_script")
+enemy_id = &"leon"
+display_name = "레온"
+hyper_description = "???"
+death_dialogue_resource = ExtResource("6_death")
+death_dialogue_cue = "start"
+encounter_dialogue = ExtResource("5_talk")
+combat_profile = ExtResource("2_combat")
+max_hp = 900
+animation_profile = ExtResource("3_anim")
+visual_offset = Vector2(0, 15)
+can_steal_nodes = true
+next_phase = ExtResource("4_arc")
+phase_transition_effect_id = &"leon_cast"

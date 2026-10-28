@@ -1,0 +1,9 @@
+~ start
+
+아크: [#speaker=arc] EMP 가동 프로토콜. 실행.
+에코: [#speaker=player] 네가 마지막인가?
+아크: [#speaker=arc] 비인가 개체의 연결 해제를 거부합니다.
+에코: [#speaker=player] 그렇다면 직접 끊어 주지.
+아크: [#speaker=arc] 위협 감지. 모든 제한을 해제합니다.
+
+=> END

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://d13uceyojjffl"]
+
+[ext_resource type="Script" uid="uid://d13txib0flcow" path="res://scripts/combat/player.gd" id="1_script"]
+[ext_resource type="Resource" path="res://data/forms/echo_animation_profile.tres" id="2_profile"]
+[ext_resource type="Script" uid="uid://o61ydeou2mib" path="res://scripts/trait/trait_controller.gd" id="3_trait"]
+
+[node name="Player" type="Node2D" unique_id=1320916522]
+script = ExtResource("1_script")
+animation_profile = ExtResource("2_profile")
+
+[node name="MotionRoot" type="Node2D" parent="." unique_id=1087770032]
+
+[node name="VisualRoot" type="Node2D" parent="MotionRoot" unique_id=741713139]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="MotionRoot/VisualRoot" unique_id=1533014895]
+position = Vector2(0, -48)
+
+[node name="EffectAnchor" type="Marker2D" parent="MotionRoot"]
+position = Vector2(0, -24)
+
+[node name="DialogueAnchor" type="Marker2D" parent="MotionRoot" groups=["dialogue_anchor"]]
+position = Vector2(0, -80)
+
+[node name="TraitController" type="Node" parent="." unique_id=169034645]
+script = ExtResource("3_trait")

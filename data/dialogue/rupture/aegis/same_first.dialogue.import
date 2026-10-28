@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://dq32t8fstaf45"
+path="res://.godot/imported/same_first.dialogue-bfbd106c08440e745670cf7cd79ff791.tres"
+
+[deps]
+
+source_file="res://data/dialogue/rupture/aegis/same_first.dialogue"
+dest_files=["res://.godot/imported/same_first.dialogue-bfbd106c08440e745670cf7cd79ff791.tres"]
+
+[params]
+
+defaults=true

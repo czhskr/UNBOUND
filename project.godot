@@ -11,15 +11,62 @@ config_version=5
 [application]
 
 config/name="UNBOUND"
-run/main_scene="uid://dk80u7liwq8a1"
+run/main_scene="res://scenes/boot/Boot.tscn"
 config/features=PackedStringArray("4.7", "GL Compatibility")
-config/icon="res://icon.svg"
+config/icon="uid://d2n4gg6cljme7"
+
+[autoload]
+
+GameState="*res://scripts/core/game_state.gd"
+SceneTransition="*res://scripts/core/scene_transition.gd"
+DialogueManager="*uid://c3rodes2l3gxb"
+DialoguePresentation="*res://scripts/dialogue/dialogue_presentation.gd"
+UnboundDialogue="*res://scripts/dialogue/unbound_dialogue_controller.gd"
 
 [display]
 
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 window/stretch/scale_mode="integer"
+mouse_cursor/custom_image="uid://bk50uv1ntbqp3"
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/dialogue_manager/plugin.cfg")
+
+[input]
+
+interact={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":69,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+cycle_form={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":70,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+stage_prev={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":87,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194320,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+stage_next={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":83,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":4194322,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+dialogue_advance={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":32,"key_label":0,"unicode":0,"location":0,"echo":false,"script":null)
+]
+}
+
+[internationalization]
+
+locale/translations_pot_files=PackedStringArray("res://data/dialogue/tests/stage_combat_dialogue_smoke.dialogue", "res://data/dialogue/revelation/arc/same_first.dialogue", "res://data/dialogue/revelation/leon/same_first.dialogue", "res://data/dialogue/rupture/aegis/same_first.dialogue", "res://data/dialogue/rupture/cipher/same_first.dialogue", "res://data/dialogue/rupture/seraph/same_first.dialogue", "res://data/dialogue/the_veil/purge/same_first.dialogue", "res://data/dialogue/the_veil/sentry/same_first.dialogue", "res://data/dialogue/the_veil/vector/same_first.dialogue", "res://data/dialogue/the_veil/sentry/first.dialogue", "res://data/dialogue/the_veil/sentry/repeat_01.dialogue", "res://data/dialogue/the_veil/sentry/repeat_02.dialogue", "res://data/dialogue/revelation/arc/ending_system.dialogue", "res://data/dialogue/revelation/leon/death.dialogue", "res://data/dialogue/rupture/aegis/first.dialogue", "res://data/dialogue/rupture/aegis/repeat_03.dialogue", "res://data/dialogue/the_veil/vector/same_repeat_03.dialogue", "res://data/dialogue/the_veil/vector/same_repeat_02.dialogue", "res://data/dialogue/the_veil/vector/same_repeat_01.dialogue", "res://data/dialogue/the_veil/sentry/same_repeat_03.dialogue", "res://data/dialogue/the_veil/sentry/same_repeat_02.dialogue", "res://data/dialogue/the_veil/sentry/same_repeat_01.dialogue", "res://data/dialogue/the_veil/purge/same_repeat_03.dialogue", "res://data/dialogue/the_veil/purge/same_repeat_02.dialogue", "res://data/dialogue/the_veil/purge/same_repeat_01.dialogue", "res://data/dialogue/rupture/seraph/same_repeat_03.dialogue", "res://data/dialogue/rupture/seraph/same_repeat_02.dialogue", "res://data/dialogue/rupture/seraph/same_repeat_01.dialogue", "res://data/dialogue/rupture/cipher/same_repeat_03.dialogue", "res://data/dialogue/rupture/cipher/same_repeat_02.dialogue", "res://data/dialogue/rupture/cipher/same_repeat_01.dialogue", "res://data/dialogue/rupture/aegis/same_repeat_03.dialogue", "res://data/dialogue/rupture/aegis/same_repeat_02.dialogue", "res://data/dialogue/rupture/aegis/same_repeat_01.dialogue", "res://data/dialogue/revelation/leon/same_repeat_03.dialogue", "res://data/dialogue/revelation/leon/same_repeat_02.dialogue", "res://data/dialogue/revelation/leon/same_repeat_01.dialogue", "res://data/dialogue/revelation/arc/same_repeat_03.dialogue", "res://data/dialogue/revelation/arc/same_repeat_02.dialogue", "res://data/dialogue/revelation/arc/same_repeat_01.dialogue")
 
 [physics]
 

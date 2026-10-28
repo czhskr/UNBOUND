@@ -1,0 +1,21 @@
+[gd_resource type="Resource" script_class="EnemyDefinition" format=3 uid="uid://b7hsbiy7wrd5j"]
+
+[ext_resource type="Script" uid="uid://b4n7o768v1oq0" path="res://scripts/core/enemy_definition.gd" id="1_script"]
+[ext_resource type="Resource" path="res://data/enemies/test_enemy.tres" id="2_combat"]
+[ext_resource type="Resource" path="res://data/enemies/animations/arc_animation.tres" id="3_anim"]
+[ext_resource type="Resource" path="res://data/dialogue/sets/arc.tres" id="4_talk"]
+
+[resource]
+script = ExtResource("1_script")
+enemy_id = &"arc"
+display_name = "아크"
+hyper_description = "EMP 가동 프로토콜"
+encounter_dialogue = ExtResource("4_talk")
+combat_profile = ExtResource("2_combat")
+max_hp = 1000
+animation_profile = ExtResource("3_anim")
+visual_offset = Vector2(0, 5)
+can_lock_nodes = true
+can_steal_nodes = true
+can_use_speed_nodes = true
+can_overload = true

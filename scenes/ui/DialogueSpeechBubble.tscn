@@ -1,0 +1,59 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_speech_bubble.gd" id="1_bubble"]
+[ext_resource type="Script" path="res://addons/dialogue_manager/nodes/dialogue_label/dialogue_label.gd" id="2_label"]
+[ext_resource type="Theme" path="res://data/ui/unbound_theme.tres" id="3_theme"]
+
+[node name="DialogueSpeechBubble" type="Control"]
+visible = false
+custom_minimum_size = Vector2(300, 88)
+layout_mode = 3
+offset_right = 300.0
+offset_bottom = 88.0
+mouse_filter = 2
+theme = ExtResource("3_theme")
+script = ExtResource("1_bubble")
+
+[node name="BubbleBackground" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="Tail" type="Polygon2D" parent="."]
+z_index = -1
+position = Vector2(150, 87)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(-8, 0, 8, 0, 0, 12)
+
+[node name="SpeakerLabel" type="Label" parent="."]
+visible = false
+layout_mode = 0
+offset_left = 12.0
+offset_top = 8.0
+offset_right = 288.0
+offset_bottom = 26.0
+mouse_filter = 2
+theme_override_colors/font_color = Color(0.55, 0.9, 0.86, 1)
+text = ""
+
+[node name="DialogueText" type="RichTextLabel" parent="."]
+layout_mode = 0
+offset_left = 12.0
+offset_top = 30.0
+offset_right = 288.0
+offset_bottom = 80.0
+mouse_filter = 2
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+bbcode_enabled = true
+text = ""
+scroll_active = false
+autowrap_mode = 3
+shortcut_keys_enabled = false
+visible_characters = 0
+visible_characters_behavior = 1
+script = ExtResource("2_label")
+seconds_per_step = 0.035

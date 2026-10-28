@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://bdkss038s8vsw"
+path="res://.godot/imported/first.dialogue-e70b6771ef3dbbd74b7929c4254dd102.tres"
+
+[deps]
+
+source_file="res://data/dialogue/rupture/cipher/first.dialogue"
+dest_files=["res://.godot/imported/first.dialogue-e70b6771ef3dbbd74b7929c4254dd102.tres"]
+
+[params]
+
+defaults=true

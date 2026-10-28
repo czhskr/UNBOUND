@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://bc011lw0lmm4e"
+path="res://.godot/imported/repeat_02.dialogue-a180349f4d1a1c72a4101ea88497a1c0.tres"
+
+[deps]
+
+source_file="res://data/dialogue/revelation/leon/repeat_02.dialogue"
+dest_files=["res://.godot/imported/repeat_02.dialogue-a180349f4d1a1c72a4101ea88497a1c0.tres"]
+
+[params]
+
+defaults=true

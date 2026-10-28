@@ -1,0 +1,84 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/main/main_menu.gd" id="1_menu"]
+[ext_resource type="PackedScene" path="res://scenes/ui/OptionsWindow.tscn" id="2_options"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_menu")
+
+[node name="Background" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(0, 0, 0, 1)
+
+[node name="RetroWindow" type="Panel" parent="."]
+custom_minimum_size = Vector2(320, 268)
+offset_right = 320.0
+offset_bottom = 268.0
+
+[node name="TitleBar" type="ColorRect" parent="RetroWindow"]
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 316.0
+offset_bottom = 28.0
+mouse_filter = 2
+color = Color(0.1, 0.16, 0.38, 1)
+
+[node name="TitleLabel" type="Label" parent="RetroWindow/TitleBar"]
+offset_left = 8.0
+offset_top = 2.0
+offset_right = 260.0
+offset_bottom = 22.0
+mouse_filter = 2
+text = "UNBOUND"
+
+[node name="StartButton" type="Button" parent="RetroWindow"]
+custom_minimum_size = Vector2(272, 36)
+offset_left = 24.0
+offset_top = 48.0
+offset_right = 296.0
+offset_bottom = 84.0
+focus_mode = 0
+disabled = true
+text = "로딩중... 0%"
+
+[node name="TutorialButton" type="Button" parent="RetroWindow"]
+custom_minimum_size = Vector2(272, 36)
+offset_left = 24.0
+offset_top = 96.0
+offset_right = 296.0
+offset_bottom = 132.0
+focus_mode = 0
+text = "튜토리얼"
+
+[node name="OptionsButton" type="Button" parent="RetroWindow"]
+custom_minimum_size = Vector2(272, 36)
+offset_left = 24.0
+offset_top = 144.0
+offset_right = 296.0
+offset_bottom = 180.0
+focus_mode = 0
+text = "옵션"
+
+[node name="ExitButton" type="Button" parent="RetroWindow"]
+custom_minimum_size = Vector2(272, 36)
+offset_left = 24.0
+offset_top = 192.0
+offset_right = 296.0
+offset_bottom = 228.0
+focus_mode = 0
+text = "종료"
+
+[node name="OptionsWindow" parent="." instance=ExtResource("2_options")]
+visible = false

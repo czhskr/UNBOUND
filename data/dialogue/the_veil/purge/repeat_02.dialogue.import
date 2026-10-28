@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://dslvj7x8wte3"
+path="res://.godot/imported/repeat_02.dialogue-228cc7e7d4cdba360f3c6d71fd1ec807.tres"
+
+[deps]
+
+source_file="res://data/dialogue/the_veil/purge/repeat_02.dialogue"
+dest_files=["res://.godot/imported/repeat_02.dialogue-228cc7e7d4cdba360f3c6d71fd1ec807.tres"]
+
+[params]
+
+defaults=true

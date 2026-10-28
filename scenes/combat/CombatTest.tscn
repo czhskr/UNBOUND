@@ -1,0 +1,71 @@
+[gd_scene format=3 uid="uid://d13uf7ijw20qc"]
+
+[ext_resource type="Script" uid="uid://d13txib0flgvr" path="res://scripts/combat/combat_test_controller.gd" id="1_controller"]
+[ext_resource type="PackedScene" uid="uid://d13uceyojjffl" path="res://scenes/combat/actors/Player.tscn" id="2_player"]
+[ext_resource type="PackedScene" uid="uid://b2j6si0fn7ip1" path="res://scenes/combat/rhythm/RhythmPanel.tscn" id="4_panel"]
+[ext_resource type="Script" uid="uid://b2j6siy18cp41" path="res://scripts/combat/rhythm_controller.gd" id="5_rhythm"]
+[ext_resource type="Script" uid="uid://brlj5lcbura0t" path="res://scripts/combat/encounter_controller.gd" id="6_encounter"]
+[ext_resource type="Resource" uid="uid://iisvr4jqucmv" path="res://data/dialogue/tests/stage_combat_dialogue_smoke.dialogue" id="7_dialogue"]
+[ext_resource type="Script" uid="uid://bsovis2hoo27n" path="res://scripts/dialogue/dialogue_cinematic_controller.gd" id="8_cinematic"]
+[ext_resource type="PackedScene" path="res://scenes/ui/HyperEncounterIntro.tscn" id="9_hyper"]
+[ext_resource type="PackedScene" path="res://scenes/ui/ActorHealthBar.tscn" id="10_health"]
+
+[node name="CombatTest" type="Node2D" unique_id=488940454]
+
+[node name="Stage" type="Node2D" parent="." unique_id=1280744250]
+
+[node name="Player" parent="Stage" unique_id=127645016 instance=ExtResource("2_player")]
+position = Vector2(112, 183)
+
+[node name="EnemySpawnPoint" type="Node2D" parent="Stage" unique_id=1161007463]
+position = Vector2(272, 183)
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=926313906]
+position = Vector2(192, 108)
+
+[node name="RhythmLayer" type="CanvasLayer" parent="." unique_id=2145246735]
+layer = 10
+
+[node name="RhythmPanel" parent="RhythmLayer" unique_id=290218482 instance=ExtResource("4_panel")]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 48.0
+offset_top = -78.0
+offset_right = -48.0
+offset_bottom = -18.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="CombatTestController" type="Node" parent="." unique_id=1237492677]
+script = ExtResource("1_controller")
+
+[node name="RhythmController" type="Node" parent="." unique_id=55827646]
+script = ExtResource("5_rhythm")
+bpm = 150.0
+approach_seconds = 3.0
+
+[node name="EncounterController" type="Node" parent="." unique_id=1660952964]
+script = ExtResource("6_encounter")
+progression_enabled = false
+intro_dialogue_resource = ExtResource("7_dialogue")
+intro_dialogue_cue = "player_enemy"
+
+[node name="DialogueCinematicController" type="Node" parent="." unique_id=1220802826]
+script = ExtResource("8_cinematic")
+
+[node name="ActorHealthBars" type="CanvasLayer" parent="." unique_id=681529736]
+layer = 8
+
+[node name="PlayerHealthBar" parent="ActorHealthBars" unique_id=2122541705 instance=ExtResource("10_health")]
+layout_mode = 3
+anchors_preset = 0
+follow_player = true
+
+[node name="EnemyHealthBar" parent="ActorHealthBars" unique_id=2104382571 instance=ExtResource("10_health")]
+layout_mode = 3
+anchors_preset = 0
+follow_enemy = true
+
+[node name="HyperEncounterIntro" parent="." unique_id=518051930 instance=ExtResource("9_hyper")]

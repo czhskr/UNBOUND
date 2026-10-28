@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://t2b8hbxw4b1u"
+path="res://.godot/imported/repeat_02.dialogue-150c4aec01adc85ff60a599054ec066c.tres"
+
+[deps]
+
+source_file="res://data/dialogue/revelation/arc/repeat_02.dialogue"
+dest_files=["res://.godot/imported/repeat_02.dialogue-150c4aec01adc85ff60a599054ec066c.tres"]
+
+[params]
+
+defaults=true

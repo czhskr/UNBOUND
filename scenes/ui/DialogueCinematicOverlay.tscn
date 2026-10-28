@@ -1,0 +1,36 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/dialogue/dialogue_cinematic_overlay.gd" id="1_overlay"]
+
+[node name="DialogueCinematicOverlay" type="CanvasLayer"]
+layer = 50
+script = ExtResource("1_overlay")
+
+[node name="TopBar" type="ColorRect" parent="."]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -96.0
+offset_bottom = 0.0
+grow_horizontal = 2
+mouse_filter = 2
+color = Color(0.02, 0.02, 0.03, 1)
+
+[node name="BottomBar" type="ColorRect" parent="."]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = 0.0
+offset_bottom = 96.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_filter = 2
+color = Color(0.02, 0.02, 0.03, 1)
+
+[node name="DialogueClickCatcher" type="Control" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
