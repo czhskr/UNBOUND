@@ -2124,7 +2124,7 @@ animation_profile = ExtResource("2_profile")
 visible = false
 sprite_frames = SubResource("SpriteFrames_olkgf")
 animation = &"idle"
-frame_progress = 0.993418
+frame_progress = 0.5336786
 script = ExtResource("3_xw44l")
 
 [node name="sentry" type="AnimatedSprite2D" parent="." unique_id=1329494030]
@@ -2161,7 +2161,7 @@ script = ExtResource("3_xw44l")
 visible = false
 sprite_frames = SubResource("SpriteFrames_pagc2")
 animation = &"idle"
-frame_progress = 0.85629314
+frame_progress = 0.39655444
 script = ExtResource("3_xw44l")
 
 [node name="aegis" type="AnimatedSprite2D" parent="." unique_id=75881158]
@@ -2174,7 +2174,7 @@ script = ExtResource("3_xw44l")
 visible = false
 sprite_frames = SubResource("SpriteFrames_xrivr")
 animation = &"idle"
-frame_progress = 0.5237874
+frame_progress = 0.06405303
 script = ExtResource("3_xw44l")
 
 [node name="leon" type="AnimatedSprite2D" parent="." unique_id=987943637]
@@ -2203,7 +2203,7 @@ visible = false
 modulate = Color(1, 1, 1, 0.49019608)
 scale = Vector2(1, 0.5)
 sprite_frames = SubResource("SpriteFrames_qfjgu")
-frame_progress = 0.4681469
+frame_progress = 0.49588695
 
 [node name="hit" type="AnimatedSprite2D" parent="." unique_id=829302800]
 visible = false
@@ -2214,4 +2214,4 @@ frame_progress = 1.0
 [node name="steal" type="AnimatedSprite2D" parent="." unique_id=298846147]
 visible = false
 sprite_frames = SubResource("SpriteFrames_b1lj4")
-frame_progress = 0.10481149
+frame_progress = 0.9528588
